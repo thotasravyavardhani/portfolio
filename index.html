@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website | Sravya Vardhani</title>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- custom css -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header design -->
+     <header class="header">
+        <a href="#" class="logo">SRAVYA VARDHANI</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#portfolio">Project</a>
+            <a href="#contact">Contact</a>    
+            <a href="#" alt="Logo" class="logo" id="logo"><i class='bx bxs-palette bx-tada' style='
+                background: transparent;
+                border: .2rem solid var(--main-color);
+                border-radius: 50%;
+                font-size: 3rem;
+                color: var(--main-color);' ></i></a>
+            
+        </nav>
+
+        <script>
+            // Array of colors to cycle through
+            const colors = [
+              'rgba(255, 0, 255, 1)',//magneta
+              'rgba(57, 255, 20, 1)',//green
+              'rgba(255, 255, 0, 1)',//yellow
+              'rgba(255,255,255,1)',//white
+              'rgba(218, 112, 214, 1)',//pink
+              'rgba(255, 0, 0, 5)',
+              'rgba(0,238,255,0.833)'//blue
+            ];
+        
+            let currentColorIndex = 0;
+        
+            // Get the logo element
+            const logo = document.getElementById('logo');
+        
+            // Add event listener to logo for click event
+            logo.addEventListener('click', () => {
+              // Change the root color using the CSS variable
+              if (colors[currentColorIndex]=='rgba(255,255,255,1)') {
+                document.documentElement.style.setProperty('--bg-color', colors[currentColorIndex]);
+                document.documentElement.style.setProperty('--text-color','#4a657e');
+                document.documentElement.style.setProperty('--main-color','#4a657e' );
+                document.documentElement.style.setProperty('--second-bg-color', '#ffffff');
+}
+                
+              else
+              {
+              document.documentElement.style.setProperty('--main-color', colors[currentColorIndex]);
+              document.documentElement.style.setProperty('--bg-color','#1f242d');
+              document.documentElement.style.setProperty('--text-color', '#ffff');
+              document.documentElement.style.setProperty('--second-bg-color', '#323946');
+              }
+    
+              // Update the color index to cycle through the colors
+              currentColorIndex = (currentColorIndex + 1) % colors.length;
+            });
+          </script>
+     </header>
+     
+     <!-- home section design -->
+    
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Sravya Vardhani</h1>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
+        <p>Self motivated tech enthusiast, aspiring to be a computer science engineer , with great interest in
+            learning various tools , technologies , and solving real world problems .
+            </p>
+        <div class="social-media">
+            <a href="https://github.com/thotasravyavardhani"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/sravyavardhanithota/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://x.com/sravyasahadev"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.instagram.com/cra_zy3450/"><i class='bx bxl-instagram-alt' ></i></a>
+        </div>
+        <a href="https://drive.google.com/file/d/1eNUoQ1WzPy-cTV9IWV3iwslVpDIMANAK/view?usp=sharing" class="btn">Download Resume</a>
+    </div>
+    <div class="home-img">
+        <img src="images/home.jpg" alt="">
+    </div>
+</section>
+
+<!-- about section design -->
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="images/about.jpg" alt="">
+    </div>
+
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Developer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quod distinctio ipsam nostrum sed voluptatem veniam ab, nam rerum, blanditiis facere eveniet ex laborum, voluptatibus magni. Recusandae omnis vitae ipsum asperiores nemo accusamus dolorum mollitia eius rem quis. Impedit, minima totam rem atque molestias repellat odit.</p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</section>
+<!-- services sectiion design -->
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+
+    <div class="services-container">
+        <div class="services-box" id="web-development">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.</p>
+            <button class="btn read-more-btn" onclick="enlargeBlock('web-development', 'Web Development', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.',
+            'Detailed content about Web Development Detailed content about Web Development goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.')">Read More</button>         
+        </div>
+
+        <div class="services-box" id='machine-learning'>
+            <i class='bx bx-line-chart' ></i>
+            <h3>Machine Learning</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.</p>
+            <button class="btn read-more-btn" onclick="enlargeBlock('machine-learning', 'Machine Learning', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.', 'Detailed content about Web Development goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.')">Read More</button>        
+        </div>
+
+        <div class="services-box" id='python'>
+            <i class='bx bxl-python' ></i>
+            <h3>Python</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.</p>
+            <button class="btn read-more-btn" onclick="enlargeBlock('python', 'Python', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.', 'Detailed content about Web Development goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.')">Read More</button>
+        </div>
+        <div class="services-box" id="ai">
+            <i class='bx bx-line-chart' ></i>
+            <h3>Artificial Intelligence</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.</p>
+            <button class="btn read-more-btn" onclick="enlargeBlock('ai', 'Artificial Intelligence', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.', 'Detailed content about Web Development goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.')">Read More</button>
+        </div>
+        <div class="services-box" id='java'>
+            <i class='bx bxl-python' ></i>
+            <h3>Java</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.</p>
+            <button class="btn read-more-btn" onclick="enlargeBlock('java', 'Java', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.','Detailed content about Web Development goes here. Lorem ipsum dolor sit, Clicking Read More enlarges the block, changes its appearance, and displays detailed content.amet consectetur adipisicing elit. Ex magnam possimus alias delectus ad aspernatur assumenda mollitia praesentium error dicta.')">Read More</button>
+        </div>
+    </div>
+</section>
+<!-- portfolio section design -->
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="images/portfolio1.png" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="index1.html"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/portfolio2.jpg" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/portfolio2.jpg" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/portfolio4.jpg" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/portfolio1.png" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/portfolio6.png" alt="">
+            <div class="portfolio-layer">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nulla?</p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section design -->
+ <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form name="submit-to-google-sheet">
+        <div class="input-box">
+            <input name="Name" type="text" placeholder="Full Name">
+            <input name="Email" type="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+            <input name="Mobile Number"type="number" placeholder="Mobile Number">
+            <input name="Email subject" type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+ </section>
+<!-- footer design -->
+ <footer class="footer">
+    <div class="footer-text">
+        <p>Made with 🩷 by Sravya Vardhani Thota | Thank you very much!</p>
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+ </footer>
+
+ <!-- acroll reveal -->
+ <script src="https://unpkg.com/scrollreveal"></script>
+
+ <!-- typed js -->
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- custom js -->
+<script src="js/script.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby1tgGXK9e2JG3WZPV4wejkJto9XE-StghxpFzWTX9gR4IecBS-h3Sp_jcnWQI-ealoNQ/exec'
+       const form = document.forms['submit-to-google-sheet']
+     
+       form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+           .then(response => console.log('Success!', response))
+           .catch(error => console.error('Error!', error.message))
+       })
+</script>
+</body>
+</html>
